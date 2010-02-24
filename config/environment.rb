@@ -21,6 +21,7 @@ Rails::Initializer.run do |config|
   config.gem "inherited_resources", :version => "= 1.0.3"
   config.gem "capybara"
   config.gem "carrierwave"
+  config.gem "factory_girl"
   config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
