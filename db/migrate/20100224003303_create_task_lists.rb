@@ -2,7 +2,8 @@ class CreateTaskLists < ActiveRecord::Migration
   def self.up
     create_table :task_lists do |t|
       t.string :name
-      t.boolean :public
+      t.boolean :public, :default => true
+      t.completed_at :date
       t.references :user
 
       t.timestamps
