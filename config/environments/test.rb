@@ -32,3 +32,4 @@ config.gem "rspec-rails", :lib => false
 config.gem "cucumber", :lib => false
 config.gem "cucumber-rails", :lib => false
 config.gem "database_cleaner", :lib => false
+config.gem "factory_girl"
