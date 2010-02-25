@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224021435) do
+ActiveRecord::Schema.define(:version => 20100225011919) do
 
   create_table "task_lists", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(:version => 20100224021435) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",                              :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 40, :default => "", :null => false
+    t.string   "password_salt",                      :default => "", :null => false
+    t.string   "reset_password_token", :limit => 20
   end
 
   create_table "watchers", :force => true do |t|
