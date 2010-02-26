@@ -10,7 +10,6 @@ Rails::Initializer.run do |config|
   config.gem 'warden', :version => '0.9.3'
   config.gem 'devise', :version => '1.0.2'
   config.gem "inherited_resources", :version => "= 1.0.3"
-  config.gem "capybara"
   config.gem "carrierwave"
   config.gem "sqlite3-ruby", :lib => "sqlite3"
 

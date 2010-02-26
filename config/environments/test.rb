@@ -29,7 +29,8 @@ config.action_mailer.delivery_method = :test
 
 config.gem "rspec", :lib => false
 config.gem "rspec-rails", :lib => false
-config.gem "cucumber", :lib => false
-config.gem "cucumber-rails", :lib => false
+config.gem "capybara", :lib => false
 config.gem "database_cleaner", :lib => false
 config.gem "factory_girl"
+
+config.action_mailer.default_url_options = {:host => 'localhost:3000'}
