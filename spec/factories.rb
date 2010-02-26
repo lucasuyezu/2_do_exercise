@@ -1,5 +1,10 @@
+Factory.sequence(:email) {|n| "email#{n}@domain.com" }
+
 Factory.define :user do |u|
   u.name "user name"
+  u.email { Factory.next(:email) }
+  u.password "123456"
+  u.password_confirmation "123456"
 end
 
 Factory.define :task_list do |tl|
