@@ -12,6 +12,7 @@ Rails::Initializer.run do |config|
   config.gem "inherited_resources", :version => "= 1.0.3"
   config.gem "carrierwave"
   config.gem "sqlite3-ruby", :lib => "sqlite3"
+  config.gem "rmagick"
 
   config.time_zone = 'UTC'
   config.i18n.default_locale = :en
