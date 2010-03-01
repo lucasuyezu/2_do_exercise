@@ -1,0 +1,19 @@
+<% form_for current_user do |f| -%>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end -%>
+<hr />
+<% form_for current_user, :html => {:multipart => true} do |f| -%>
+  <p>
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </p>
+  <p>
+    <%= f.submit "Submit avatar" %>
+  </p>
+<% end -%>

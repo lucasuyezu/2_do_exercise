@@ -16,10 +16,11 @@
 
   <div id="user_bar">
     <% if user_signed_in? -%>
-      <p><%= link_to 'Sign out', destroy_user_session_path %></p>
+      <p><%= link_to 'Home', user_root_path %> |
+      <%= link_to 'Sign out', destroy_user_session_path %></p>
     <% else -%>
-      <p><%= link_to 'Sign up as User', new_user_registration_path %></p>
-      <p><%= link_to 'Sign in as User', new_user_session_path %></p>
+      <p><%= link_to 'Sign up as User', new_user_registration_path %> |
+      <%= link_to 'Sign in as User', new_user_session_path %></p>
     <% end -%>
   </div>
 
