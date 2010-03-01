@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
          :rememberable, :registerable, :trackable, :timeoutable, :validatable
 
   attr_accessible :email, :password, :password_confirmation
+
+  mount_uploader :avatar, AvatarUploader
 end
