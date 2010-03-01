@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :authenticatable, :confirmable, :lockable, :recoverable,
          :rememberable, :registerable, :trackable, :timeoutable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :name, :avatar, :email, :password, :password_confirmation
 
   mount_uploader :avatar, AvatarUploader
 end
