@@ -9,6 +9,30 @@ require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
 require 'capybara/rails'
+Capybara.default_selector = :css
+
+class ActionController::TestCase
+  def login(email, password)
+    visit("/users/sign_in")
+    fill_in 'Email', :with => email
+    fill_in 'Password', :with => password
+    click 'Sign in'
+  end
+
+  def logout
+    visit("/home")
+    click "Sign out"
+  end
+end
+
+module Spec::Example::ExampleGroupMethods
+  alias :scenario  :example
+  alias :xscenario :xexample
+end
+
+module Spec::DSL::Main
+  alias :story :describe
+end
 
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
