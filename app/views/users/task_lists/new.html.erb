@@ -1,0 +1,12 @@
+<% form_for @task_list, :url => user_task_lists_path(current_user) do |f| -%>
+  <p><%= f.label :name, "Task name" %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= f.check_box :public %>&nbsp;<%= f.label :public %></p>
+  <div id="tasks">
+    <% f.fields_for :tasks do |task| -%>
+      <%= render "task", :object => task %>
+    <% end -%>
+  </div>
+  <p><%= add_task_link "Add another task", f %></p>
+  <p><%= f.submit %></p>
+<% end -%>

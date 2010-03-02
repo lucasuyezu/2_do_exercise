@@ -4,6 +4,5 @@ class TaskList < ActiveRecord::Base
   has_many :watchers
   has_many :watching_users, :through => :watchers
 
-  validates_presence_of :user
-  validates_associated :user
+  accepts_nested_attributes_for :tasks, :allow_destroy => true
 end

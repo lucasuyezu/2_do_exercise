@@ -1,0 +1,10 @@
+<div id="avatar">
+  <%= image_tag @task_list.user.avatar_url if @task_list.user.avatar? %>
+</div>
+<div id="task_list">
+  <h1><%= h @task_list.name %></h1>
+  <h5>by <%= h @task_list.user.name %></h5>
+  <div id="tasks">
+    <%= render @task_list.tasks %>
+  </div>
+</div>

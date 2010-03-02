@@ -1,4 +1,5 @@
 Factory.sequence(:email) {|n| "email#{n}@domain.com" }
+Factory.sequence(:number) {|n| n }
 
 Factory.define :user do |u|
   u.name "user name"
@@ -9,19 +10,19 @@ end
 
 Factory.define :task_list do |tl|
   tl.association :user
-  tl.name "task list name"
+  tl.name { "task list name #{Factory.next(:number)}" }
   tl.public true
 end
 
 Factory.define :public_task_list, :class => TaskList do |tl|
   tl.association :user
-  tl.name "task list name"
+  tl.name { "task list name #{Factory.next(:number)}" }
   tl.public true
 end
 
 Factory.define :private_task_list, :class => TaskList do |tl|
   tl.association :user
-  tl.name "task list name"
+  tl.name { "task list name #{Factory.next(:number)}" }
   tl.public false
 end
 

@@ -1,0 +1,7 @@
+<div class="task">
+  <% if task.completed_at.nil? %>
+    <p><%= h task.name %></p>
+  <% else %>
+    <del><%= h task.name %></del>
+  <% end %>
+</div>

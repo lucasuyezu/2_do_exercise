@@ -1,7 +1,3 @@
 class HomeController < ApplicationController
-  def index
-  end
-
-  def home
-  end
+  before_filter :authenticate_user!, :only => :home
 end

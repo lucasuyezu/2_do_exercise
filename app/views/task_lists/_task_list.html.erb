@@ -1,0 +1,6 @@
+<div class="task_list">
+  <p>
+    <%= link_to h(task_list.name), task_list_path(task_list) %>
+    <br />
+  This <%= h task_list.public? ? "public" : "private" %> list was created <%= h time_ago_in_words(task_list.created_at) %> ago</p>
+</div>

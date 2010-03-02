@@ -18,7 +18,7 @@ story 'As a user I should be able to edit my info' do
   end
 
   scenario "should upload the user's avatar" do
-    fill_in "Avatar", :with => File.expand_path(File.dirname(__FILE__) + "/avatar.png")
-    click "Submit picture"
+    attach_file "Avatar", File.expand_path(File.dirname(__FILE__) + "/avatar.jpg")
+    click "Submit avatar"
   end
 end

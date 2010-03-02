@@ -12,6 +12,8 @@ require 'capybara/rails'
 Capybara.default_selector = :css
 
 class ActionController::TestCase
+  include Devise::TestHelpers
+
   def login(email, password)
     visit("/users/sign_in")
     fill_in 'Email', :with => email
@@ -46,8 +48,7 @@ Spec::Runner.configure do |config|
   # lines, delete config/database.yml and disable :active_record
   # in your config/boot.rb
   config.use_transactional_fixtures = false
-  config.use_instantiated_fixtures  = false
-  config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+
   config.include Capybara
 
   config.before(:each) do
