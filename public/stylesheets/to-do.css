@@ -1,0 +1,12 @@
+div.user {
+  margin-top: 20px;
+  clear: both;
+}
+
+div.user div.avatar {
+  float: left;
+}
+
+div.user div.user-info {
+  margin-left: 60px;
+}

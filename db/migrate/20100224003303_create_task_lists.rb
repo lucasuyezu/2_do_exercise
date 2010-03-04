@@ -3,7 +3,7 @@ class CreateTaskLists < ActiveRecord::Migration
     create_table :task_lists do |t|
       t.string :name
       t.boolean :public, :default => true
-      t.completed_at :date
+      t.datetime :completed_at
       t.references :user
 
       t.timestamps

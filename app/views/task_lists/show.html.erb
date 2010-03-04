@@ -4,6 +4,7 @@
 <div id="task_list">
   <h1><%= h @task_list.name %></h1>
   <h5>by <%= h @task_list.user.name %></h5>
+  <p><%= button_to "Watch this task list", watch_task_list_path(@task_list) if @show_watch_button %></p>
   <div id="tasks">
     <%= render @task_list.tasks %>
   </div>

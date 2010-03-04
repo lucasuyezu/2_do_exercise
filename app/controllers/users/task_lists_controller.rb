@@ -1,5 +1,5 @@
 class Users::TaskListsController < InheritedResources::Base
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:index, :show]
   belongs_to :user
 
   def new

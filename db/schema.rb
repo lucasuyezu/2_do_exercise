@@ -13,7 +13,8 @@ ActiveRecord::Schema.define(:version => 20100301031633) do
 
   create_table "task_lists", :force => true do |t|
     t.string   "name"
-    t.boolean  "public",     :default => true
+    t.boolean  "public",       :default => true
+    t.datetime "completed_at"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20100301031633) do
 
   create_table "tasks", :force => true do |t|
     t.string   "name"
-    t.date     "completed_at"
+    t.datetime "completed_at"
     t.integer  "task_list_id"
     t.datetime "created_at"
     t.datetime "updated_at"

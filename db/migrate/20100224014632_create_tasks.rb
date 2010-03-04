@@ -2,7 +2,7 @@ class CreateTasks < ActiveRecord::Migration
   def self.up
     create_table :tasks do |t|
       t.string :name
-      t.date :completed_at
+      t.datetime :completed_at
       t.references :task_list
       t.timestamps
     end

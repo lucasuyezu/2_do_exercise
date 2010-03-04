@@ -1,0 +1,4 @@
+<div class="user">
+  <div class="avatar"><%= image_tag user.avatar.thumb.url if user.avatar? %></div>
+  <div class="user-info"><%= link_to h(user.name), user_path(user) %></div>
+</div>

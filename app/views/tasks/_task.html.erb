@@ -1,7 +1,8 @@
 <div class="task">
   <% if task.completed_at.nil? %>
     <p><%= h task.name %></p>
+    <%= complete_task_button(task) %>
   <% else %>
-    <del><%= h task.name %></del>
+    <del><%= h task.name %></del>&nbsp;(completed <%= time_ago_in_words task.completed_at %> ago)
   <% end %>
 </div>

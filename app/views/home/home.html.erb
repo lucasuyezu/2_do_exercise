@@ -1,6 +1,7 @@
 <h1>Welcome, <%= current_user.name %>!</h1>
 <div id="sidebar">
-  <%= link_to "Edit my info", edit_user_path(current_user) %><br />
+  <%= link_to "Edit my info", edit_user_registration_path %><br />
+  <%= link_to "Upload/Change your picture", edit_user_path(current_user) %><br />
   <%= link_to 'Create a new to-do list', new_user_task_list_path(current_user) %>
 </div>
 <div id="main_div">
